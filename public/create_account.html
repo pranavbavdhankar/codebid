@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Account</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <form method="post" action="/create-account">
+    <h2>Create Account</h2>
+
+    <label for="firstname">First Name:</label>
+    <input type="text" name="first_name" id="firstname" placeholder="Enter first name" required />
+
+    <label for="lastname">Last Name:</label>
+    <input type="text" name="last_name" id="lastname" placeholder="Enter last name" required />
+
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" placeholder="Choose a username" required />
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" placeholder="Create password" required />
+
+    <label for="confirm-password">Confirm Password:</label>
+    <input type="password" name="confirmPassword" id="confirm-password" placeholder="Confirm password" required />
+
+    <button type="submit" name="create-btn">Create Account</button>
+  </form>
+</body>
+</html>
