@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency Subscription Plans</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #007bff 0%, #00b4db 100%);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-card.popular::before {
+            content: "Most Popular";
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #007bff;
+            color: white;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            border-bottom-left-radius: 10px;
+        }
+
+        .pricing-card.popular {
+            border: 2px solid #007bff;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #007bff;
+        }
+
+        .card-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: #007bff;
+        }
+
+        .card-price span {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .feature-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            color: #28a745;
+            position: absolute;
+            left: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: #007bff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0056b3;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #007bff;
+            border: 2px solid #007bff;
+        }
+
+        .btn-outline:hover {
+            background: #007bff;
+            color: white;
+        }
+
+        .common-features {
+            text-align: center;
+            padding: 2rem 0;
+            background: white;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+
+        .common-features h3 {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            padding: 0 1rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .card-price {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Choose Your Travel Agency Plan</h1>
+        <p>Select the perfect plan to grow your travel business</p>
+    </div>
+
+    <div class="container">
+        <div class="pricing-grid">
+            <!-- Starter Plan -->
+            <div class="pricing-card">
+                <h3 class="card-title">Starter</h3>
+                <div class="card-price">$49.99<span>/month</span></div>
+                <ul class="feature-list">
+                    <li>Up to 50 Bookings/month</li>
+                    <li>Basic Travel Management</li>
+                    <li>Email Support</li>
+                    <li>Standard Booking System</li>
+                    <li>Basic Reporting</li>
+                    <li>1 User Account</li>
+                </ul>
+                <button class="btn btn-outline" onclick="startTrial('starter')">Start Free Trial</button>
+            </div>
+
+            <!-- Professional Plan -->
+            <div class="pricing-card popular">
+                <h3 class="card-title">Professional</h3>
+                <div class="card-price">$99.99<span>/month</span></div>
+                <ul class="feature-list">
+                    <li>Up to 200 Bookings/month</li>
+                    <li>Advanced Travel Management</li>
+                    <li>Priority Support</li>
+                    <li>Custom Booking System</li>
+                    <li>Advanced Analytics</li>
+                    <li>5 User Accounts</li>
+                    <li>CRM Integration</li>
+                    <li>Marketing Tools</li>
+                </ul>
+                <button class="btn btn-primary" onclick="startTrial('professional')">Start Free Trial</button>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="pricing-card">
+                <h3 class="card-title">Enterprise</h3>
+                <div class="card-price">Custom</div>
+                <ul class="feature-list">
+                    <li>Unlimited Bookings</li>
+                    <li>Full Travel Management Suite</li>
+                    <li>24/7 Premium Support</li>
+                    <li>Custom API Access</li>
+                    <li>Advanced Business Intelligence</li>
+                    <li>Unlimited User Accounts</li>
+                    <li>Custom Integrations</li>
+                    <li>Dedicated Account Manager</li>
+                    <li>White-label Solutions</li>
+                </ul>
+                <button class="btn btn-outline" onclick="contactSales()">Contact Sales</button>
+            </div>
+        </div>
+
+        <div class="common-features">
+            <h3>All plans include:</h3>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <span>✓</span>
+                    <span>Secure Payment Processing</span>
+                </div>
+                <div class="feature-item">
+                    <span>✓</span>
+                    <span>Mobile Responsive</span>
+                </div>
+                <div class="feature-item">
+                    <span>✓</span>
+                    <span>SSL Security</span>
+                </div>
+                <div class="feature-item">
+                    <span>✓</span>
+                    <span>Regular Updates</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function startTrial(plan) {
+            alert(`Starting free trial for ${plan} plan!`);
+            // Add your trial signup logic here
+        }
+
+        function contactSales() {
+            alert('Contacting sales team...');
+            // Add your sales contact logic here
+        }
+
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
