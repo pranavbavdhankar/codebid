@@ -9,6 +9,10 @@
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
+
+  .card-link{
+    text-decoration: none;
+  }
   
   /* Navigation Bar */
   .navbar {
@@ -20,7 +24,7 @@
     width: 100%;
     top: 0;
     z-index: 100;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgb(56 125 194 / 50%);
   }
   
   .logo {
@@ -52,7 +56,7 @@
     background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 70vh;
     position: relative;
   }
   
@@ -99,7 +103,7 @@
   }
   
   .search-bar button {
-    background-color: #ff5e57;
+    background-color: #3498db;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -121,7 +125,7 @@
 .explore h2 {
   font-size: 36px;
   margin-bottom: 10px;
-  color: #ff5e57;
+  color: #3498db;
 }
 
 .explore p {
@@ -163,7 +167,7 @@
 
 .card-content h3 {
   font-size: 20px;
-  color: #ff5e57;
+  color: #3498db;
   margin-bottom: 10px;
 }
 

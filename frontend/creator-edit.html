@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Blog</title>
+  <link rel="stylesheet" href="./css/creator-edit.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="creator-container">
+    <!-- Header -->
+    <header class="creator-header">
+      <div class="header-left">
+        <button class="back-button" onclick="navigateToDashboard()">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <h1 id="page-title">Create New Travel Blog</h1>
+      </div>
+      <button class="save-button" onclick="handleSave()">
+        <i class="fas fa-save"></i>
+        Save Blog
+      </button>
+    </header>
+
+    <div class="creator-content">
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Basic Info Card -->
+        <div class="card">
+          <div class="card-content">
+            <div class="form-group">
+              <label for="title">Blog Title</label>
+              <input type="text" id="title" name="title" placeholder="Enter an engaging title">
+            </div>
+            
+            <div class="form-group">
+              <label for="location">Location</label>
+              <div class="location-input">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" id="location" name="location" placeholder="City, Country">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="description">Blog Introduction</label>
+              <textarea id="description" name="description" placeholder="Write an introduction to your travel experience"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabbed Content -->
+        <div class="card tabbed-content">
+          <div class="tabs">
+            <button class="tab-button active" data-tab="accommodations">
+              <i class="fas fa-bed"></i>
+              Accommodations
+            </button>
+            <button class="tab-button" data-tab="activities">
+              <i class="fas fa-hiking"></i>
+              Activities & Attractions
+            </button>
+            <button class="tab-button" data-tab="food">
+              <i class="fas fa-utensils"></i>
+              Food & Dining
+            </button>
+            <button class="tab-button" data-tab="tips">
+              <i class="fas fa-lightbulb"></i>
+              Travel Tips
+            </button>
+          </div>
+
+          <div class="tab-content">
+            <!-- Accommodations Tab -->
+            <div class="tab-pane active" id="accommodations-tab">
+              <div class="card-content">
+                <div class="items-list" id="accommodations-list"></div>
+                <div class="add-item">
+                  <input type="text" id="new-accommodation" placeholder="Add accommodation detail">
+                  <button class="add-button" onclick="addItem('accommodations')">Add</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Activities Tab -->
+            <div class="tab-pane" id="activities-tab">
+              <div class="card-content">
+                <div class="items-list" id="activities-list"></div>
+                <div class="add-item">
+                  <input type="text" id="new-activity" placeholder="Add activity or attraction">
+                  <button class="add-button" onclick="addItem('activities')">Add</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Food Tab -->
+            <div class="tab-pane" id="food-tab">
+              <div class="card-content">
+                <div class="items-list" id="food-list"></div>
+                <div class="add-item">
+                  <input type="text" id="new-food" placeholder="Add food or restaurant recommendation">
+                  <button class="add-button" onclick="addItem('food')">Add</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tips Tab -->
+            <div class="tab-pane" id="tips-tab">
+              <div class="card-content">
+                <div class="items-list" id="tips-list"></div>
+                <div class="add-item">
+                  <input type="text" id="new-tip" placeholder="Add helpful tip">
+                  <button class="add-button" onclick="addItem('tips')">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Traveler Types Card -->
+        <div class="card">
+          <div class="card-content">
+            <h2>Traveler Types</h2>
+            <p class="subtitle">Select all traveler types that this blog is relevant for:</p>
+            <div class="traveler-types" id="traveler-types"></div>
+          </div>
+        </div>
+
+        <!-- Images Card -->
+        <div class="card">
+          <div class="card-content">
+            <h2>Images</h2>
+            <p class="subtitle">Upload photos from your trip to enhance your blog.</p>
+            <div class="image-upload">
+              <div class="upload-area" id="upload-area">
+                <i class="fas fa-image"></i>
+                <p>Drop images here</p>
+                <p class="small">or click to browse</p>
+              </div>
+            </div>
+            <div class="image-grid" id="image-grid">
+              <p class="no-images">No images uploaded yet</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Publishing Card -->
+        <div class="card">
+          <div class="card-content">
+            <h2>Publishing</h2>
+            <p class="subtitle">Save your blog as a draft or publish it immediately.</p>
+            <div class="publishing-buttons">
+              <button class="draft-button">Save as Draft</button>
+              <button class="publish-button">Publish</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/creator-edit.js"></script>
+</body>
+</html> 

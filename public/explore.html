@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Destinations - Wanderlust Canvas</title>
+
+    <link rel="stylesheet" href="css/explore-page.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <h1 class="logo"> <a href="/" style="text-decoration: none; color: white;"> Wanderlust </a></h1>
+          <ul class="nav-links">
+            <li><a href="#explore">Explore</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="#">Signup</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>Explore Destinations</h1>
+            <div class="search-container">
+                <div class="search-bar">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search destinations...">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                        Search
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="destinations-section">
+                <div class="destinations-header">
+                    <h2>Popular Destinations</h2>
+                    <div class="view-options">
+                        <button class="view-option active" data-view="grid">
+                            <i class="fas fa-th-large"></i>
+                        </button>
+                        <button class="view-option" data-view="list">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="destinations-grid">
+                    <!-- Destination cards will be dynamically inserted here -->
+                </div>
+            </div>
+
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3>Sort By</h3>
+                    <div class="sort-options">
+                        <button class="sort-button active" data-sort="price-low">
+                            <i class="fas fa-sort-amount-down"></i>
+                            Price: Low to High
+                        </button>
+                        <button class="sort-button" data-sort="price-high">
+                            <i class="fas fa-sort-amount-up"></i>
+                            Price: High to Low
+                        </button>
+                        <button class="sort-button" data-sort="rating">
+                            <i class="fas fa-star"></i>
+                            Rating
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Filters</h3>
+                    <div class="filter-section">
+                        <h4>Price Range</h4>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="price1">
+                                <label for="price1">$0 - $500</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="price2">
+                                <label for="price2">$501 - $1000</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="price3">
+                                <label for="price3">$1001 - $2000</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="price4">
+                                <label for="price4">$2000+</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h4>Duration</h4>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="duration1">
+                                <label for="duration1">1-3 days</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="duration2">
+                                <label for="duration2">4-7 days</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="duration3">
+                                <label for="duration3">8-14 days</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="duration4">
+                                <label for="duration4">15+ days</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h4>Rating</h4>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="rating1">
+                                <label for="rating1">4+ Stars</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="rating2">
+                                <label for="rating2">3+ Stars</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="rating3">
+                                <label for="rating3">2+ Stars</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <i class="fas fa-globe-americas"></i>
+                    <span>Wanderlust Canvas</span>
+                </div>
+                <p class="footer-description">
+                    Discover the world's most beautiful destinations and create unforgettable memories with our curated travel experiences.
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Destinations</a></li>
+                    <li><a href="#">Travel Guides</a></li>
+                    <li><a href="#">Special Offers</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Travel Street, Adventure City</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-envelope"></i> info@wanderlustcanvas.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Wanderlust Canvas. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/explore-page.js"></script>
+</body>
+</html>

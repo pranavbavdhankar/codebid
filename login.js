@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('./db');
 const bcrypt = require('bcrypt');
+const path = require('path');
 
 router.post('/login', (req, res) => {
     const { username, password } = req.body;
@@ -14,9 +15,22 @@ router.post('/login', (req, res) => {
         const match = await bcrypt.compare(password, user.password);
 
         if (!match) return res.status(401).send('Incorrect password');
-
-        res.send(`Welcome, ${user.first_name || user.username}`);
+        req.session.user = user;
+        res.redirect('/home');
     });
+});
+
+router.post("/logout", (req, res) => {
+    req.session.destroy();
+    res.redirect('/login');
+});
+
+router.get("/home", (req, res) => {
+    res.render('home', { user: req.session.user });
+});
+
+router.get('/login', (req, res) => {
+    res.sendFile(__dirname + '/public/login_page.html');
 });
 
 module.exports = router;

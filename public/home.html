@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TravelX - Explore World</title>
-  <link rel="stylesheet" href="home.css" />
+  <title>Wanderlust - Explore World</title>
+  <link rel="stylesheet" href="./css/home.css" />
 </head>
 <body>
   <!-- Header / Hero Section -->
   <header>
     <nav class="navbar">
-      <h1 class="logo">Wanderlust</h1>
+      <h1 class="logo"> <a href="/" style="text-decoration: none; color: white;"> Wanderlust </a></h1>
       <ul class="nav-links">
         <li><a href="#explore">Explore</a></li>
-        <li><a href="#">Search</a></li>
-        <li><a href="#">Login</a></li>
+        <li><a href="/subscriptions">Subscription</a></li>
+        <li><a href="/login">Login</a></li>
         <li><a href="#">Signup</a></li>
       </ul>
     </nav>
@@ -54,32 +54,50 @@
 
 <!-- Explore Section -->
 <section class="explore" id="explore">
-  <h2>Explore Destinations</h2>
+  <a href="./explore.html" style="text-decoration: none;"><h2 style="text-decoration: none;">Explore Destinations</h2></a>
   <p>Find your next adventure</p>
 
   <div class="explore-cards">
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Mountains">
-      <div class="card-content">
-        <h3>Mountains</h3>
-        <p>Escape to the serene heights and breathtaking views of the world’s most majestic mountain ranges.</p>
-        <p>Escape to the serene heights and breathtaking views of the world’s most majestic mountain ranges.</p>
-      </div>
+      <a href="./destination.html?id=swiss-alps" class="card-link">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Swiss Alps">
+        <div class="card-content">
+          <h3>Swiss Alps, Switzerland</h3>
+          <div class="rating">★★★★☆ (4.5)</div>
+          <p class="price">Starting from $1,299</p>
+          <p>Experience the breathtaking beauty of the Swiss Alps with world-class skiing, charming mountain villages, and stunning panoramic views. Perfect for adventure seekers and nature lovers.</p>
+        </div>
+      </a>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1522199710521-72d69614c702" alt="Forests">
-      <div class="card-content">
-        <h3>Forests</h3>
-        <p>Get lost in lush greenery, explore hidden trails, and connect with nature in peaceful forests.</p>
-        <p>Get lost in lush greenery, explore hidden trails, and connect with nature in peaceful forests.</p>
-      </div>
+      <a href="./destination.html?id=amazon-rainforest" class="card-link">
+        <img src="https://images.unsplash.com/photo-1522199710521-72d69614c702" alt="Amazon Rainforest">
+        <div class="card-content">
+          <h3>Amazon Rainforest, Brazil</h3>
+          <div class="rating">★★★★★ (4.8)</div>
+          <p class="price">Starting from $899</p>
+          <p>Immerse yourself in the world's largest rainforest. Discover exotic wildlife, indigenous cultures, and unique ecosystems through guided jungle tours and river cruises.</p>
+        </div>
+      </a>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beaches">
+      <a href="./destination.html?id=maldives" class="card-link">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Maldives">
+        <div class="card-content">
+          <h3>Maldives</h3>
+          <div class="rating">★★★★★ (4.9)</div>
+          <p class="price">Starting from $2,499</p>
+          <p>Escape to paradise with crystal-clear waters, overwater bungalows, and pristine white-sand beaches. Perfect for honeymooners and luxury travelers seeking ultimate relaxation.</p>
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d" alt="Kyoto">
       <div class="card-content">
-        <h3>Beaches</h3>
-        <p>Soak up the sun, stroll along golden sands, and enjoy the relaxing rhythm of beach life.</p>
-        <p>Soak up the sun, stroll along golden sands, and enjoy the relaxing rhythm of beach life.</p>
+        <h3>Kyoto, Japan</h3>
+        <div class="rating">★★★★☆ (4.7)</div>
+        <p class="price">Starting from $1,599</p>
+        <p>Discover Japan's cultural heart with ancient temples, traditional tea houses, and stunning cherry blossoms. Experience authentic Japanese culture and cuisine.</p>
       </div>
     </div>
   </div>

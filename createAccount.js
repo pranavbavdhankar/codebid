@@ -27,4 +27,8 @@ router.post('/create-account', async (req, res) => {
     }
 });
 
+router.get('/signup', (req, res) => {
+    res.sendFile(__dirname + '/public/create_account.html');
+});
+
 module.exports = router;

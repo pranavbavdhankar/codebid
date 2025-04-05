@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust Canvas - Subscription Plans</title>
+    <link rel="stylesheet" href="css/subscription.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <h1>Wanderlust Canvas</h1>
+        </div>
+        <nav class="main-nav">
+            <a href="#plans">Plans</a>
+            <a href="#features">Features</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+    </header>
+
+    <div class="hero-section">
+        <h1>Choose Your Travel Agency Plan</h1>
+        <p>Select the perfect plan to grow your travel business</p>
+    </div>
+
+    <div class="container" id="plans">
+        <div class="pricing-grid">
+            <!-- Starter Plan -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <h3 class="card-title">Starter</h3>
+                    <div class="card-price">$49.99<span>/month</span></div>
+                </div>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> Up to 50 Bookings/month</li>
+                    <li><i class="fas fa-check"></i> Basic Travel Management</li>
+                    <li><i class="fas fa-check"></i> Email Support</li>
+                    <li><i class="fas fa-check"></i> Standard Booking System</li>
+                    <li><i class="fas fa-check"></i> Basic Reporting</li>
+                    <li><i class="fas fa-check"></i> 1 User Account</li>
+                </ul>
+                <button class="btn btn-outline" onclick="startTrial('starter')">
+                    <i class="fas fa-rocket"></i> <a href="/payment">Start Free Trial</a>
+                </button>
+            </div>
+
+            <!-- Professional Plan -->
+            <div class="pricing-card popular">
+                <div class="popular-badge">Most Popular</div>
+                <div class="card-header">
+                    <h3 class="card-title">Professional</h3>
+                    <div class="card-price">$99.99<span>/month</span></div>
+                </div>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> Up to 200 Bookings/month</li>
+                    <li><i class="fas fa-check"></i> Advanced Travel Management</li>
+                    <li><i class="fas fa-check"></i> Priority Support</li>
+                    <li><i class="fas fa-check"></i> Custom Booking System</li>
+                    <li><i class="fas fa-check"></i> Advanced Analytics</li>
+                    <li><i class="fas fa-check"></i> 5 User Accounts</li>
+                    <li><i class="fas fa-check"></i> CRM Integration</li>
+                    <li><i class="fas fa-check"></i> Marketing Tools</li>
+                </ul>
+                <button class="btn btn-primary" onclick="startTrial('professional')">
+                    <i class="fas fa-rocket"></i> <a href="/payment">Start Free Trial</a>
+                </button>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <h3 class="card-title">Enterprise</h3>
+                    <div class="card-price">Custom</div>
+                </div>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> Unlimited Bookings</li>
+                    <li><i class="fas fa-check"></i> Full Travel Management Suite</li>
+                    <li><i class="fas fa-check"></i> 24/7 Premium Support</li>
+                    <li><i class="fas fa-check"></i> Custom API Access</li>
+                    <li><i class="fas fa-check"></i> Advanced Business Intelligence</li>
+                    <li><i class="fas fa-check"></i> Unlimited User Accounts</li>
+                    <li><i class="fas fa-check"></i> Custom Integrations</li>
+                    <li><i class="fas fa-check"></i> Dedicated Account Manager</li>
+                    <li><i class="fas fa-check"></i> White-label Solutions</li>
+                </ul>
+                <button class="btn btn-outline" onclick="contactSales()">
+                    <i class="fas fa-headset"></i> Contact Sales
+                </button>
+            </div>
+        </div>
+
+        <div class="common-features" id="features">
+            <h2>All plans include:</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Secure Payment Processing</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Mobile Responsive</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-lock"></i>
+                    <span>SSL Security</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-sync"></i>
+                    <span>Regular Updates</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section" id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What payment methods do you accept?</h3>
+                    <p>We accept all major credit cards, PayPal, and bank transfers for subscription payments.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I change my plan later?</h3>
+                    <p>Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is there a contract or long-term commitment?</h3>
+                    <p>No, all plans are month-to-month with no long-term commitment. You can cancel anytime.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What happens after my free trial?</h3>
+                    <p>After your 14-day free trial, you'll be automatically enrolled in the plan you selected. You can cancel before the trial ends to avoid charges.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer refunds?</h3>
+                    <p>Yes, we offer a 30-day money-back guarantee if you're not satisfied with our service.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I get support?</h3>
+                    <p>Support is available via email, chat, and phone depending on your plan. Enterprise customers get 24/7 dedicated support.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Wanderlust Canvas</h3>
+                <p>Your journey to success starts here</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@wanderlustcanvas.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Wanderlust Canvas. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/subscription.js"></script>
+</body>
+</html>

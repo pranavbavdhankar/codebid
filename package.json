@@ -1,16 +1,18 @@
 {
   "dependencies": {
+    "-": "^0.0.1",
     "bcrypt": "^5.1.1",
     "body-parser": "^2.2.0",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "mysql2": "^3.14.0"
+    "express-session": "^1.18.1",
+    "mysql2": "^3.14.0",
+    "y": "^0.3.2"
   },
   "name": "codbid",
   "version": "1.0.0",
   "description": "",
   "main": "createAccount.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.294.0/lucide.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <!-- Sidebar content will be added here -->
+    </div>
+    
+    <div class="main-content">
+        <div class="flex flex-col p-6">
+            <div class="header">
+                <div class="flex items-center gap-2">
+                    <button class="btn-ghost" id="backButton">
+                        <i data-lucide="arrow-left"></i>
+                    </button>
+                    <h1 id="pageTitle">Create New Travel Blog</h1>
+                </div>
+                <button class="btn-save" id="saveButton">
+                    <i data-lucide="save"></i>
+                    Save Blog
+                </button>
+            </div>
+
+            <div class="grid-container">
+                <!-- Main Blog Info -->
+                <div class="main-info">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="form-group">
+                                <label for="title">Blog Title</label>
+                                <input type="text" id="title" placeholder="Enter an engaging title">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="location">Location</label>
+                                <div class="location-input">
+                                    <i data-lucide="map-pin"></i>
+                                    <input type="text" id="location" placeholder="City, Country">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="description">Blog Introduction</label>
+                                <textarea id="description" placeholder="Write an introduction to your travel experience"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Traveler Types -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h2>Traveler Types</h2>
+                            <div class="traveler-types" id="travelerTypes">
+                                <!-- Traveler type checkboxes will be added here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accommodations -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h2>Accommodations</h2>
+                            <div class="list-container" id="accommodationsList">
+                                <!-- Accommodations will be added here -->
+                            </div>
+                            <div class="add-item">
+                                <input type="text" id="newAccommodation" placeholder="Add accommodation detail">
+                                <button class="btn-add">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activities -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h2>Activities & Attractions</h2>
+                            <div class="list-container" id="activitiesList">
+                                <!-- Activities will be added here -->
+                            </div>
+                            <div class="add-item">
+                                <input type="text" id="newActivity" placeholder="Add activity or attraction">
+                                <button class="btn-add">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Food -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h2>Food & Dining</h2>
+                            <div class="list-container" id="foodList">
+                                <!-- Food items will be added here -->
+                            </div>
+                            <div class="add-item">
+                                <input type="text" id="newFood" placeholder="Add food or dining option">
+                                <button class="btn-add">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tips -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h2>Travel Tips</h2>
+                            <div class="list-container" id="tipsList">
+                                <!-- Tips will be added here -->
+                            </div>
+                            <div class="add-item">
+                                <input type="text" id="newTip" placeholder="Add travel tip">
+                                <button class="btn-add">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.294.0/lucide.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
